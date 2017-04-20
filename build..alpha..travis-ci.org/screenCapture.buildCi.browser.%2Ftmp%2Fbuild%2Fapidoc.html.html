@@ -1,0 +1,407 @@
+<html><head></head><body><div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a>node-webcl (v0.9.2)</a>
+</h1>
+<h4>A WebCL implementation for desktops with NodeJS</h4>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.node-webcl">module node-webcl</a><ol>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">node-webcl.</span>clUtils</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.node-webcl.clUtils">module node-webcl.clUtils</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-webcl.clUtils.DivUp">
+            function <span class="apidocSignatureSpan">node-webcl.clUtils.</span>DivUp
+            <span class="apidocSignatureSpan">(dividend, divisor)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-webcl.clUtils.clamp">
+            function <span class="apidocSignatureSpan">node-webcl.clUtils.</span>clamp
+            <span class="apidocSignatureSpan">(a, b, c)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-webcl.clUtils.fillArray">
+            function <span class="apidocSignatureSpan">node-webcl.clUtils.</span>fillArray
+            <span class="apidocSignatureSpan">(array, max)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-webcl.clUtils.max">
+            function <span class="apidocSignatureSpan">node-webcl.clUtils.</span>max
+            <span class="apidocSignatureSpan">(a, b)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-webcl.clUtils.min">
+            function <span class="apidocSignatureSpan">node-webcl.clUtils.</span>min
+            <span class="apidocSignatureSpan">(a, b)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-webcl.clUtils.printArray">
+            function <span class="apidocSignatureSpan">node-webcl.clUtils.</span>printArray
+            <span class="apidocSignatureSpan">(array)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-webcl.clUtils.roundUp">
+            function <span class="apidocSignatureSpan">node-webcl.clUtils.</span>roundUp
+            <span class="apidocSignatureSpan">(group_size, global_size)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-webcl.clUtils.sprintf">
+            function <span class="apidocSignatureSpan">node-webcl.clUtils.</span>sprintf
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.node-webcl" id="apidoc.module.node-webcl">module node-webcl</a></h1>
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.node-webcl.clUtils" id="apidoc.module.node-webcl.clUtils">module node-webcl.clUtils</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.node-webcl.clUtils.DivUp" id="apidoc.element.node-webcl.clUtils.DivUp">
+        function <span class="apidocSignatureSpan">node-webcl.clUtils.</span>DivUp
+        <span class="apidocSignatureSpan">(dividend, divisor)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">DivUp = function (dividend, divisor)
+{
+  return (dividend % divisor == 0) ? Math.round(dividend / divisor) : Math.round(dividend / divisor) + 1;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-webcl.clUtils.clamp" id="apidoc.element.node-webcl.clUtils.clamp">
+        function <span class="apidocSignatureSpan">node-webcl.clUtils.</span>clamp
+        <span class="apidocSignatureSpan">(a, b, c)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function clamp(a, b, c) { return min(max(a,b),c); }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-webcl.clUtils.fillArray" id="apidoc.element.node-webcl.clUtils.fillArray">
+        function <span class="apidocSignatureSpan">node-webcl.clUtils.</span>fillArray
+        <span class="apidocSignatureSpan">(array, max)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">fillArray = function (array, max)
+{
+  if(max==undefined) max=100;
+  for (var i = 0, l=array.length; i &lt; l; ++i)
+    array[i] = Math.floor(Math.random()*max);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-webcl.clUtils.max" id="apidoc.element.node-webcl.clUtils.max">
+        function <span class="apidocSignatureSpan">node-webcl.clUtils.</span>max
+        <span class="apidocSignatureSpan">(a, b)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function max(a, b) { return a&gt;b ? a : b; }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-webcl.clUtils.min" id="apidoc.element.node-webcl.clUtils.min">
+        function <span class="apidocSignatureSpan">node-webcl.clUtils.</span>min
+        <span class="apidocSignatureSpan">(a, b)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function min(a, b) { return a&lt;b ? a : b; }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-webcl.clUtils.printArray" id="apidoc.element.node-webcl.clUtils.printArray">
+        function <span class="apidocSignatureSpan">node-webcl.clUtils.</span>printArray
+        <span class="apidocSignatureSpan">(array)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">printArray = function (array)
+{
+  for (var i = 0, l=array.length; i &lt; l; ++i)
+    console.log(sprintf("%d: %d", i, array[i]));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-webcl.clUtils.roundUp" id="apidoc.element.node-webcl.clUtils.roundUp">
+        function <span class="apidocSignatureSpan">node-webcl.clUtils.</span>roundUp
+        <span class="apidocSignatureSpan">(group_size, global_size)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">roundUp = function (group_size, global_size)
+{
+    return (global_size % group_size == 0) ? global_size : (global_size + group_size - r);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-webcl.clUtils.sprintf" id="apidoc.element.node-webcl.clUtils.sprintf">
+        function <span class="apidocSignatureSpan">node-webcl.clUtils.</span>sprintf
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">sprintf = function () {
+  // Return a formatted string
+  //
+  // version: 1109.2015
+  // discuss at: http://phpjs.org/functions/sprintf    // +   original by: Ash Searle (http://hexmen.com/blog/)
+  // + namespaced by: Michael White (http://getsprink.com)
+  // +    tweaked by: Jack
+  // +   improved by: Kevin van Zonneveld (http://kevin.vanzonneveld.net)
+  // +      input by: Paulo Freitas    // +   improved by: Kevin van Zonneveld (http://kevin.vanzonneveld.net)
+  // +      input by: Brett Zamir (http://brett-zamir.me)
+  // +   improved by: Kevin van Zonneveld (http://kevin.vanzonneveld.net)
+  // *     example 1: sprintf("%01.2f", 123.1);
+  // *     returns 1: 123.10    // *     example 2: sprintf("[%10s]", 'monkey');
+  // *     returns 2: '[    monkey]'
+  // *     example 3: sprintf("[%'#10s]", 'monkey');
+  // *     returns 3: '[####monkey]'
+  var regex = /%%|%(\d+\$)?([-+\'#0 ]*)(\*\d+\$|\*|\d+)?(\.(\*\d+\$|\*|\d+))?([scboxXuidfegEG])/g;
+  var a = arguments,
+  i = 0,
+  format = a[i++];
+
+  // pad()
+  var pad = function (str, len, chr, leftJustify) {
+    if (!chr) {
+      chr = ' ';
+    }
+    var padding = (str.length &gt;= len) ? '' : Array(1 + len - str.length &gt;&gt;&gt; 0).join(chr);
+    return leftJustify ? str + padding : padding + str;
+  };
+
+
+  //justify()
+  var justify = function (value, prefix, leftJustify, minWidth, zeroPad, customPadChar) {
+    var diff = minWidth - value.length;
+    if (diff &gt; 0) {
+      if (leftJustify || !zeroPad) {
+        value = pad(value, minWidth, customPadChar, leftJustify);
+      } else {
+        value = value.slice(0, prefix.length) + pad('', diff, '0', true) + value.slice(prefix.length);
+      }
+    }
+    return value;
+  };
+
+  //formatBaseX()
+  var formatBaseX = function (value, base, prefix, leftJustify, minWidth, precision, zeroPad) {
+    // Note: casts negative numbers to positive ones
+    var number = value &gt;&gt;&gt; 0;
+    prefix = prefix &amp;&amp; number &amp;&amp; {
+      '2': '0b',
+      '8': '0',
+      '16': '0x'
+    }[base] || '';
+    value = prefix + pad(number.toString(base), precision || 0, '0', false);
+    return justify(value, prefix, leftJustify, minWidth, zeroPad);
+  };
+
+  //formatString()
+  var formatString = function (value, leftJustify, minWidth, precision, zeroPad, customPadChar) {
+    if (precision != null) {
+      value = value.slice(0, precision);
+    }
+    return justify(value, '', leftJustify, minWidth, zeroPad, customPadChar);
+  };
+
+  //  doFormat()
+  var doFormat = function (substring, valueIndex, flags, minWidth, _, precision, type) {
+    var number;
+    var prefix;
+    var method;
+    var textTransform;
+    var value;
+    if (substring == '%%') {
+      return '%';
+    }
+
+    // parse flags
+    var leftJustify = false,
+    positivePrefix = '',
+    zeroPad = false,
+    prefixBaseX = false,
+    customPadChar = ' ';
+    var flagsl = flags.length;
+    for (var j = 0; flags &amp;&amp; j &lt; flagsl; j++) {
+      switch (flags.charAt(j)) {
+      case ' ':
+        positivePrefix = ' ';
+        break;
+      case '+':
+        positivePrefix = '+';
+        break;
+      case '-':
+        leftJustify = true;
+        break;
+      case "'":
+        customPadChar = flags.charAt(j + 1);
+        break;
+      case '0':
+        zeroPad = true;
+        break;
+      case '#':
+        prefixBaseX = true;
+        break;
+      }
+    }
+
+    // parameters may be null, undefined, empty-string or real valued
+    // we want to ignore null, undefined and empty-string values
+    if (!minWidth) {
+      minWidth = 0;
+    } else if (minWidth == '*') {
+      minWidth = +a[i++];
+    } else if (minWidth.charAt(0) == '*') {
+      minWidth = +a[minWidth.slice(1, -1)];
+    } else {
+      minWidth = +minWidth;
+    }
+    // Note: undocumented perl feature:
+    if (minWidth &lt; 0) {
+      minWidth = -minWidth;
+      leftJustify = true;
+    }
+
+    if (!isFinite(minWidth)) {
+      throw new Error('sprintf: (minimum-)width must be finite');
+    }
+    if (!precision) {
+      prec ...</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
+</body></html>
